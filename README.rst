@@ -12,7 +12,7 @@ Download and run ``wpm\__main__.py``
 
 Original readme below:
 
-<br>
+ㅤㅤ
 
 wpm — measure and improve your typing speed
 ===========================================
