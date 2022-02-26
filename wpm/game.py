@@ -128,11 +128,15 @@ class GameManager(object):
         """Words per minute."""
         if self.start is None:
             return 0
+        if not elapsed:
+            return 0
         return min((60.0 * self.position / 5.0) / elapsed, 999)
 
     def cps(self, elapsed):
         """Characters per second."""
         if self.start is None:
+            return 0
+        if not elapsed:
             return 0
         return min(float(self.position) / elapsed, 99)
 
@@ -202,7 +206,6 @@ class GameManager(object):
     def resize(self):
         """Handles a resized terminal."""
         self.screen.redraw = True
-
         max_y, max_x = self.screen.window.getmaxyx()
         self.screen.clear()
 
