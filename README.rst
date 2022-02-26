@@ -1,3 +1,19 @@
+Notes for windows use:
+
+Install ``windows-curses``:
+
+.. code:: bash
+
+    $ pip install windows-curses
+
+Notes for general use of this fork:
+
+Download and run ``wpm\__main__.py``
+
+Original readme below:
+
+<br>
+
 wpm — measure and improve your typing speed
 ===========================================
 |versions| |license| |pypi|
