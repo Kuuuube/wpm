@@ -13,6 +13,7 @@ The quotes database is *not* covered by the AGPL!
 
 import os
 import runpy
+import sys
 
 from setuptools import setup
 
@@ -38,12 +39,11 @@ setup(
     package_dir={"wpm": "wpm"},
     package_data={"wpm": ["data/examples.json.gz"]},
     include_package_data=True,
-    install_requires=(["windows-curses"] if sys.platform.startswith("win") else []),
+    install_requires=(["windows-curses","setuptools"] if sys.platform.startswith("win") else ["setuptools"]),
     url="https://github.com/cslarsen/wpm",
     download_url="https://github.com/cslarsen/wpm/tarball/v%s" % _VERSION,
     license="https://www.gnu.org/licenses/agpl-3.0.html",
     long_description=open("README.rst").read(),
-    install_requires=["setuptools"],
     zip_safe=True,
     test_suite="tests",
     keywords=["wpm", "typing", "typist"],
