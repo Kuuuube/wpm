@@ -125,6 +125,8 @@ def load_plain_text_quote(quotes, filename):
 
 def print_stats(stats, cpm):
     """Prints table of game results."""
+    opts = parse_args()
+    print ("Loading stats from: " + str(opts.stats_file))
     table = []
 
     config = wpm.config.Config()
